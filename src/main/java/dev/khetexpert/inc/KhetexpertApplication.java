@@ -9,22 +9,21 @@
 package dev.khetexpert.inc;
 
 import dev.firebase.FirebaseApplication;
-import dev.khetexpert.inc.objects.Admin;
+import dev.springdoc.EnableAPIDocumentation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@Admin
 @EnableCaching
 @EnableFeignClients
 @FirebaseApplication
 @SpringBootApplication
+@EnableAPIDocumentation
 @EnableMongoRepositories
 public class KhetexpertApplication {
 
-    @Admin
     public static void main(String[] args) {
         SpringApplication.run(KhetexpertApplication.class, args);
         System.out.println("welcomes you !!");
